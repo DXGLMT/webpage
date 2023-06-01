@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+> Kozetuo Ofuje Apeji:
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: beige;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  margin-top: 0;
+  color: darkbrown;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form {
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: darkbrown;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid darkbrown;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: darkbrown;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  padding: 10px 20px;
+
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7a6868;
+}
+
+.artwork {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid darkbrown;
+  border-radius: 4px;
+  background-color: beige;
+  transition: border-color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.artwork h3 {
+  margin-top: 0;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.artwork:hover,
+.artwork:focus {
+  border-color: darkbrown;
+}
+
+.artwork:hover h3,
+.artwork:focus h3 {
+  color: darkbrown;
+}
+
+.artwork img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 30px; /* Limit maximum width */
+  max-height: 30px; /* Limit maximum height */
+}
+
+.artwork:hover img,
+.artwork:focus img {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+/* New Form Styling */
+
+.form-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid darkbrown;
+  border-radius: 4px;
+  background-color: beige;
+}
+
+.form-container label {
+  color: darkbrown;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container textarea {
+  background-color: white;
+  color: #333;
+}
+
+.form-container input[type="file"] {
+  display: none;
+}
+
+.upload-button {
+  padding: 10px 20px;
+  background-color: darkbrown;
+  color: rgb(0, 0, 0);
+  border: brown;
+  border: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #7a6868;
+}
+
+.file-name {
+  margin-top: 10px;
+  color: #333;
 }
